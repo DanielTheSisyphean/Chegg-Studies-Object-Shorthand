@@ -6,8 +6,12 @@ function getTotalBooksCount(books) {
 
 function getTotalAccountsCount(accounts) {
   // YOUR SOLUTION HERE
-  // I'm certain this is a more complicated way of handling this, but for total accounts length returns the number of objects in an array. This could have been done with a forEach loop potentially, but was unnecessary.
-  return accounts.length;
+  // whilst inefficient, we are using a For/in loop to count the number of accounts in the array and meet the requirements.
+  counter = 0;
+  for (account in accounts){
+    counter++;
+  }
+  return counter;
 }
 
 function getBooksBorrowedCount(books) {
